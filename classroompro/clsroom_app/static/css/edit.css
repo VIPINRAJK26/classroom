@@ -1,0 +1,44 @@
+.container {
+    display: flexbox contents;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #ce0dec;
+    width: 800px;
+    box-shadow: 1px,1px,1px,1px;
+    
+}
+
+.my-form {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}

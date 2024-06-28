@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+    <style>
+        body{
+            background-color: rgb(224, 211, 195);
+        }
+        section{
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .container{
+            align-items: center;
+            align-content: center;
+            display: flexbox;
+            justify-content: center;
+            border-radius: 15px;
+            box-shadow: 2px 2px 2px 2px #3a3939;
+            border: 10px black;
+            height: 400px;
+            width: 600px;
+            margin-top: 200px;
+            background-color: burlywood;
+        }
+        .container:hover{
+            transform: scale(1.02);
+            transition: all .2s ease-in-out;
+            background-color:rgb(232, 171, 91);
+        filter: drop-shadow(0 0  1em rgb(237, 182, 110) );
+
+        }
+        .options{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .option a:hover{
+            transform: scale(1.09);
+            transition: all .2s ease-out;
+            color: blue;
+        }
+        .option img:hover{
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0.5, 0, -0.5, 0, 1, 0, 0, 0, 0, 1);
+            transition: all .4s ease-in;
+            box-shadow: 1px 1px 1px 1px;
+        }
+
+    </style>
+
+    
+
+    <section>
+        <div class="container mt-4">
+            <div class="login">
+                <h3>Are you a Teacher or a Student?</h3>
+            </div>
+            <div class="options">
+                <div class="option">
+                    <img src="{% static 'assets\img\teacher1.jpg' %}" alt="Teacher">
+                    <a href="{% url 'teacher_login' %}">Teacher Login</a>
+                </div>
+                <div class="option">
+                    <img src="{% static 'assets\img\student.1.jpg' %}" alt="Teacher">
+                    <a href="{% url 'student_login' %}">Student Login</a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+</body>
+</html>
+
